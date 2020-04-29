@@ -1,0 +1,15 @@
+<div>
+  <div class="categories-header">
+    <p class="categories-header-text">Categories</p>
+  </div>
+  <div class="categories-list">
+    <ul class="categories-ul">
+      <li *ngFor="let category of categories">
+        <a (click)="function(category.id)">
+          {{category.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+

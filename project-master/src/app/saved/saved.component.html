@@ -1,0 +1,14 @@
+<div class="body">
+  <app-user-profile></app-user-profile>
+  <div class="items">
+    <div *ngFor="let specialist of savedSpecialists" class="card" routerLink="/recipe/:{{specialist.id}}/details">
+      <h2>
+        <a [title]="specialist.title + ' details'">
+          {{ specialist.title }}
+        </a>
+      </h2>
+      <img src="{{specialist.front_image}}">
+      <!--<button (click)="remove(specialist)">X</button>--->
+    </div>
+  </div>
+</div>

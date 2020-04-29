@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+<body>
+<div class="form">
+
+  <div class="segment">
+    <h1>Sign in</h1>
+  </div>
+
+  <p>
+    <input type="text" [(ngModel)]="username" placeholder="Username or email Address"/>
+  </p>
+  <p>
+    <input type="password" [(ngModel)]="password" placeholder="Password"/>
+  </p>
+  <button class="red" type="button" (click)="logIn()"><i class="fas fa-lock"></i> Log in
+  </button>
+
+  <button [routerLink]="['/signup']" class="new" type="button">Create an account</button>
+
+</div>
+
+</body>

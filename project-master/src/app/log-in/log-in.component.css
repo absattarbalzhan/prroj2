@@ -1,0 +1,75 @@
+body, input, button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+body{
+  display: block;
+  background-color: whitesmoke;
+  width:50%;
+  margin-left: 300px;
+
+}
+h1 {
+
+  font-size: 45px;
+  color: #1da1f2;
+
+}
+
+form {
+  padding: 16px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.segment {
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+button, input {
+  border:1px solid #1da1f2;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: white;
+
+}
+
+label {
+  width: 100%;
+}
+
+input {
+
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus{
+  box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px white;
+}
+
+button {
+  color:#1da1f2;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 10px;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px #1da1f2;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px white;
+}
+
+button.red {
+  color: #1da1f2;
+}
+
+button.new {
+  margin-top: 10%;
+}

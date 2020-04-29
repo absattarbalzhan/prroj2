@@ -1,0 +1,31 @@
+<div class="body" >
+  <app-user-profile></app-user-profile>
+  <div class="profile-cont">
+    <div class="left-part">
+      <div class="section">
+        <label>Name:
+        </label>
+        <input [(ngModel)]="name" placeholder="name"/>
+      </div>
+      <div class="section">
+        <label>Last Name:
+        </label>
+        <input [(ngModel)]="lastname" placeholder="lastname"/>
+      </div>
+      <div class="section">
+        <label>Email:</label>
+        <input [(ngModel)]="email" placeholder="email"/>
+      </div>
+      <button class="button1" (click)="save()">
+        Save
+      </button>
+    </div>
+    <div class="left-part">
+      <img src='.../../assets/6_1.jpg' alt="photo">
+    </div>
+    <div>
+      <button class="button1" (click)="logOut()" routerLink="/main">Logout</button>
+    </div>
+  </div>
+</div>
+

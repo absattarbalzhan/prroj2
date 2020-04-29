@@ -1,0 +1,23 @@
+<body *ngFor='let item of specialistService.list' routerLink="/specialist/:{{item.id}}/details">
+<div class="card">
+  <div class="title">
+    <h2>
+      {{item.title}}
+    </h2>
+    <div>
+      <button type="button">More</button>
+    </div>
+  </div>
+  <hr>
+  <img src={{item.front_image}} alt={{item.title}}>
+  <div class="section">
+    Category: {{item.category.name}}
+  </div>
+  <div class="section">
+    Rating: {{item.likes}}
+  </div>
+  <div class="section">
+    <strong>Age:</strong> {{item.age}}
+  </div>
+</div>
+</body>

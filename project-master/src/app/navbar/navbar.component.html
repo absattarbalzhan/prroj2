@@ -1,0 +1,24 @@
+<nav>
+  <div class="container1">
+    <div class="logo" routerLink="/main">
+      <a class="nav-title" href="/main">Specialist finder</a>
+    </div>
+    <div class="search-bar input-group">
+      <label>
+        <input type="text" placeholder="Search"/>
+      </label>
+    </div>
+    <div class="btn-group">
+      <div>
+        <button *ngIf="!logged" [routerLink]="['/login']" class="unit" type="button">Login</button>
+      </div>
+      <div>
+        <button *ngIf="!logged" [routerLink]="['/signup']" class="unit" type="button">Sign up</button>
+      </div>
+      <div>
+        <button *ngIf="logged" [routerLink]="['/profile/details']" class="unit setInvisible" type="button">Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

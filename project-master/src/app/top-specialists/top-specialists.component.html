@@ -1,0 +1,20 @@
+<div>
+  <div class="best-header">
+    <p class="best-header-text">Best recipes</p>
+  </div>
+  <div>
+    <ul class="best-ul">
+      <li *ngFor="let specialist of specialists" class="best-list" routerLink="/recipe/:{{specialist.id}}/details">
+        <div class="card-body">
+          <h2>
+            {{specialist.title}}
+          </h2>
+          <div>
+            Rating: {{specialist.likes}}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+

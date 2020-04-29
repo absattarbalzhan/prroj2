@@ -1,0 +1,44 @@
+<div *ngIf="selectedItem">
+  <div class="card">
+    <div class="card-body">
+      {{selectedItem.category.name}}
+      <div class="title">
+        <h2>
+          {{selectedItem.title}}
+        </h2>
+        <div>
+          <button type="button" (click)="save()" >Save</button>
+          <button type="button" (click)="back()">Back</button>
+        </div>
+      </div>
+      <hr>
+      <div class="box">
+        <div class="left-part">
+          <img src={{selectedItem.front_image}} style="width: 90%; height: 300px; margin-top: 5%" alt="">
+          <div *ngFor='let photo of selectedItem.images'>
+            <img src={{photo}} style="width: 90%; margin-top: 5%">
+          </div>
+        </div>
+        <div class="right-part">
+          <div class="section">
+            Rating: {{selectedItem.likes}}
+          </div>
+          <div class="section">
+            <strong>Age:</strong> {{selectedItem.age}}
+          </div>
+          <div class="section">
+            <strong>Gender:</strong> {{selectedItem.gender}}
+          </div>
+          <div class="section">
+            <strong>City:</strong> {{selectedItem.city}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="comment">
+  <input type="text" placeholder="Comment" id="comment">
+  <button (click)="send()">Send</button>
+</div>

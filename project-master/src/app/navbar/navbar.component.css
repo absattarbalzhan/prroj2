@@ -1,0 +1,130 @@
+.container1{
+  margin: auto;
+  width: 90% ;
+  display: flex;
+  flex-direction: row;
+  padding: 1% 5%;
+  justify-content: center;
+}
+.logo{
+  margin: auto;
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav{
+  background-color: whitesmoke;
+}
+.nav-title{
+  font-size: 65px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  color: #1da1f2;
+}
+
+img{
+  width: 20%;
+}
+
+@media screen and (max-width: 995px){
+  .container1{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo{
+    width: 60%;
+    align-self: center;
+  }
+  .search-bar{
+    align-self: center;
+  }
+  .btn-group{
+    align-self: center;
+  }
+}
+
+.search-bar{
+  width: 30%;
+  margin: auto;
+}
+
+
+/* neumorphic search-bar*/
+
+button, input {
+  border: 1px solid #1da1f2;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px;
+  background-color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  letter-spacing: -0.2px;
+}
+
+input {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  color: #1da1f2;
+  margin-right: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+label {
+  color: #1da1f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  display: block;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+button {
+  color: #1da1f2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px #1da1f2;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.unit {
+  border-radius: 5px;
+  line-height: 0;
+  display:inline-flex;
+  justify-content: center;
+  align-items:center;
+  margin: 0 10px;
+  padding: 23px;
+  font-size: 17px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  margin: 0;
+  flex: 1;
+}
+.btn-group{
+  margin: auto;
+}
+

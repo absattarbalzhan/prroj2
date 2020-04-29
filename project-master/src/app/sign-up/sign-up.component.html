@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<body>
+<div class="form">
+  <div class="segment">
+    <h1>Create your account</h1>
+  </div>
+
+  <p>
+    <input type="text" [(ngModel)]="username" placeholder="Username"/>
+  </p>
+
+  <p>
+    <input type="text" [(ngModel)]="email" placeholder="Email address"/>
+  </p>
+
+  <p>
+    <input type="password" [(ngModel)]="password" placeholder="Password"/>
+  </p>
+
+  <button type="button" (click)="signUp()"><i class="fas fa-lock"></i> Sign up</button>
+
+  <button [routerLink]="['/login']" class="new" type="button">Have an account?</button>
+
+</div>
+</body>
