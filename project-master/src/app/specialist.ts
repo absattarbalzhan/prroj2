@@ -1,5 +1,3 @@
-import { Category } from './category';
-import { Comment } from './comment';
 
 export interface Specialist {
   id: number;
@@ -8,9 +6,10 @@ export interface Specialist {
   gender: string;
   city: string;
   likes: number;
-  comments: string[];
   front_image: string;
-  images: string[];
-  category: Category;
+  first_image?: string;
+  second_image: string;
+  third_image: string;
+  category: number;
   author: number;
 }

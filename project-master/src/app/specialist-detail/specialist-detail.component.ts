@@ -33,7 +33,7 @@ export class SpecialistDetailComponent implements OnInit {
     id = id.substr(1);
     this.specialistService.getSpecialist(id).subscribe(specialist => this.selectedItem = specialist);
     this.specialistService.getSpecialistComments(id).subscribe(
-       // comments => this.comments = comments
+      comments => this.comments = comments
     );
   }
 
@@ -56,4 +56,19 @@ export class SpecialistDetailComponent implements OnInit {
       }
     );
   }
+
+  delete() {
+    this.specialistService.delete(this.selectedItem.id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.router.navigate(['/']);
+        },
+        error => console.log(error));
+  }
+
 }
+
+
+
+

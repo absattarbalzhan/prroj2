@@ -3,10 +3,20 @@
     <div class="logo" routerLink="/main">
       <a class="nav-title" href="/main">Specialist finder</a>
     </div>
+
+
+
+    
     <div class="search-bar input-group">
-      <label>
-        <input type="text" placeholder="Search"/>
-      </label>
+      <input class="inputBox" type="text" placeholder =" Search... " [(ngModel)]="name">
+      <button (click)="search()">
+        Search
+      </button>
+
+
+
+
+
     </div>
     <div class="btn-group">
       <div>

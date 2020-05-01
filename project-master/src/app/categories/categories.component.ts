@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CategoryService} from '../category.service';
 import {Category} from '../category';
-import {SpecialistService} from "../specialist.service";
+import {SpecialistService} from '../specialist.service';
 
 
 @Component({

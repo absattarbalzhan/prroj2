@@ -1,10 +1,10 @@
 <div>
   <div class="best-header">
-    <p class="best-header-text">Best recipes</p>
+    <p class="best-header-text">Best specialists</p>
   </div>
   <div>
     <ul class="best-ul">
-      <li *ngFor="let specialist of specialists" class="best-list" routerLink="/recipe/:{{specialist.id}}/details">
+      <li *ngFor="let specialist of specialists" class="best-list" routerLink="/specialist/:{{specialist.id}}/details">
         <div class="card-body">
           <h2>
             {{specialist.title}}

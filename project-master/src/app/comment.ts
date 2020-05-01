@@ -5,5 +5,5 @@ export interface Comment {
   title: string;
   text: string;
   author_id: number;
-  recipe_id: number;
+  specialist_id: number;
 }

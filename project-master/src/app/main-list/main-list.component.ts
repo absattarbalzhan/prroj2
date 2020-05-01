@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {SpecialistService} from "../specialist.service";
-import {Specialist} from "../specialist";
+import {SpecialistService} from '../specialist.service';
+import {Specialist} from '../specialist';
 
 @Component({
   selector: 'app-main-list',
@@ -8,7 +8,7 @@ import {Specialist} from "../specialist";
   styleUrls: ['./main-list.component.css']
 })
 export class MainListComponent implements OnInit {
-  recipes: Specialist[];
+ specialists: Specialist[];
 
   constructor(
     public specialistService: SpecialistService
@@ -21,7 +21,7 @@ export class MainListComponent implements OnInit {
 
   getSpecialists(): void {
     this.specialistService.getSpecialists()
-      .subscribe(recipes => this.recipes = recipes);
+      .subscribe(specialists => this.specialists = specialists);
   }
 
 }

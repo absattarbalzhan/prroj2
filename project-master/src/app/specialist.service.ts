@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 import {Specialist} from './specialist';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {Message} from "@angular/compiler/src/i18n/i18n_ast";
+import {Comment} from './comment';
+
+export class Message {
+  message: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -47,7 +51,7 @@ export class SpecialistService {
   }
 
   getSavedSpecialists(): Observable<Specialist[]> {
-    return this.http.get<Specialist[]>(`${this.BASE_URL}/api/specialists/followed/`);
+    return this.http.get<Specialist[]>(`${this.BASE_URL}/api/specialists/follow/`);
   }
 
   createSpecialist(title: string, age: string, gender: string, city: string, category: number,
@@ -72,4 +76,15 @@ export class SpecialistService {
     this.getList(id).subscribe(list => this.list = list);
   }
 
+
+  search(name: string): Observable<Specialist[]> {
+    return this.http.get<Specialist[]>(`${this.BASE_URL}/api/specialists/search/${name}/`);
+
+  }
+
+
+
+  delete(id: number): Observable<Specialist> {
+    return this.http.delete<Specialist>(`${this.BASE_URL}/api/specialists/${id}/`);
+  }
 }
